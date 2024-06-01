@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Avatar, Typography } from "antd";
+import profile from "./assets/profile.jpeg";
+
+import { Divider } from "antd";
+
+const { Title } = Typography;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: 20,
+          marginTop: 40,
+        }}
+      >
+        <Avatar
+          style={{
+            border: "#023595 10px solid ",
+            boxShadow: "-3px 1px -3px #ffffff",
+          }}
+          size={180}
+          src={profile}
+        />
+      </div>
+
+      <Title style={{ textAlign: "center", color: "#fff" }}>
+        Chanchala Gorale
+      </Title>
+
+      <Divider style={{ color: "#fff" }} />
     </div>
   );
 }
