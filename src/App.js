@@ -21,15 +21,13 @@ function App() {
       let url =
         "https://language-detector-app-da3b8ebadb7e.herokuapp.com/predict";
 
-      console.log("url");
-
       const jsonString = CircularJSON.stringify(text);
 
       axios
         .post(url, jsonString, {
           headers: {
             "Content-Type": "application/json;charset=UTF-8",
-            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Origin": "https://cmg-ai-ml.netlify.app/",
           },
         })
         .then((res) => {
