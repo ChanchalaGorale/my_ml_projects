@@ -6,8 +6,6 @@ import { Card } from "antd";
 import { FaLaptopCode } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
-import { Steps } from "antd";
-
 const { Title } = Typography;
 
 function App() {
