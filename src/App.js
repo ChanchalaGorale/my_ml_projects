@@ -85,11 +85,11 @@ function App() {
   ];
 
   let companies = [
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLPEisEifT_jKS6_OILza2bQi_NhFjHoeDFQ&s",
+    "https://yt3.googleusercontent.com/7kopIxs3pC9-87UEu-EnEzubeZFKigU9IHXA5SFfD9MU0okrQvERJP21ukynfERhILNZz9uQWw=s900-c-k-c0x00ffffff-no-rj",
+    "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png",
     "https://firebasestorage.googleapis.com/v0/b/community-90e01.appspot.com/o/assets%2FGroup%201085%204.png?alt=media&token=42691fcf-045c-4c79-9c37-dd4f91409325",
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgnsWy8ajwAzehQ5hngN07Svk9dcnN2G5aW08b-p3SgRzjxnaM9L0-BvQDx7BEvFon2SA&usqp=CAU",
-    "https://yt3.googleusercontent.com/7kopIxs3pC9-87UEu-EnEzubeZFKigU9IHXA5SFfD9MU0okrQvERJP21ukynfERhILNZz9uQWw=s900-c-k-c0x00ffffff-no-rj",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLPEisEifT_jKS6_OILza2bQi_NhFjHoeDFQ&s",
-    "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png",
   ];
 
   const divider = () => {
@@ -131,8 +131,7 @@ function App() {
         Chanchala Gorale
       </Title>
       <p style={{ textAlign: "center", color: "#fff", fontWeight: "600" }}>
-        AI Engineer | Founder/Product Managment | Full Stack Developer | UI/UX
-        Developer | Technical Writer
+        AI Engineer | Full Stack Developer | Product Manager
       </p>
 
       <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
