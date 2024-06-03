@@ -80,12 +80,6 @@ function App() {
       name: "Project Management",
       list: ["JIRA", "Slack", "Confluence", "Notion", "Agile/Scrum"],
     },
-
-    // Machine Learning . Deep Learning . TensorFlow . Scikit-Learn . Transformer. Flask . Pandas . NumPy . Matplotlib . Seaborn .  jupyter notebook
-    // Data Collection . Data Cleaning . Feature analysis . Creating a Model . Testing Model . Deploying Model
-    //  Javascript . React (Redux) + React-Native + Node.JS . Express .  RESTful APIs . MongoDB/SQL .Testing
-    // GitHub . Responsive Design. Bootstrap/ANTD/Material UI . Figma .  UI/UX Design Principles
-    // JIRA . Slack . Notion . Confluence . Agile development . Canva . Google Analytics . Meta
   ];
 
   return (
@@ -119,7 +113,10 @@ function App() {
         <Row gutter={[30, 30]}>
           {skills?.map((item, index) => (
             <Col span={8}>
-              <Card title={item.name} style={{ maxWidth: "60vw" }}>
+              <Card
+                title={item.name}
+                style={{ maxWidth: "60vw", height: "100%" }}
+              >
                 <div
                   style={{
                     display: "flex",
@@ -129,7 +126,7 @@ function App() {
                   }}
                 >
                   {item?.list?.map((i) => (
-                    <Tag>{i}</Tag>
+                    <Tag style={{ marginBottom: 5 }}>{i}</Tag>
                   ))}
                 </div>
               </Card>
@@ -155,7 +152,7 @@ function App() {
                   }}
                 >
                   {item?.skills?.map((i) => (
-                    <Tag>{i}</Tag>
+                    <Tag style={{ marginBottom: 5 }}>{i}</Tag>
                   ))}
                 </div>
                 <div
