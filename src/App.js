@@ -95,7 +95,7 @@ function App() {
   const divider = () => {
     return (
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <div style={{ width: "60vh" }}>
+        <div style={{ width: "30vh" }}>
           <Divider style={{ borderColor: "#d9d9d9" }} />
         </div>
       </div>
@@ -114,56 +114,53 @@ function App() {
       >
         <Avatar
           style={{
-            border: "#023595 10px solid ",
-            boxShadow: "-3px 1px -3px #ffffff",
+            border: "#b5ceff 3px solid",
+            boxShadow: "5px 1px 5px #fff",
           }}
           size={180}
           src={profile}
         />
       </div>
 
-      <Title style={{ textAlign: "center", color: "#fff" }}>
+      <Title
+        style={{
+          textAlign: "center",
+          color: "#fff",
+        }}
+      >
         Chanchala Gorale
       </Title>
+      <p style={{ textAlign: "center", color: "#fff", fontWeight: "600" }}>
+        AI Engineer | Founder/Product Managment | Full Stack Developer | UI/UX
+        Developer | Technical Writer
+      </p>
+
       <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
-        <Steps
-          size="small"
-          current={1}
-          items={[
-            {
-              title: "AI Engineer",
-              status: "finish",
-            },
-            {
-              title: "Founder/Product Managment",
-              status: "finish",
-            },
-            {
-              title: "Full Stack Developer",
-              status: "finish",
-            },
-            {
-              title: "UI/UX Developer",
-              status: "finish",
-            },
-            {
-              title: "Technical Writer",
-              status: "finish",
-            },
-          ]}
-        />
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflowX: "auto",
+          }}
+        >
+          {companies?.map((i) => (
+            <Avatar
+              style={{ marginLeft: 20, marginRight: 20 }}
+              size={60}
+              src={i}
+            />
+          ))}
+        </div>
       </div>
       {divider()}
 
       <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
-        <h1 style={{ color: "#fff", textAlign: "center" }}>Skills</h1>
+        <h1 style={{ color: "#868686", textAlign: "center" }}>Skills</h1>
         <Row gutter={[30, 30]}>
           {skills?.map((item, index) => (
             <Col span={8}>
-              <Card
-                title={item.name}
-                style={{ maxWidth: "60vw", height: "100%" }}
-              >
+              <Card title={item.name} style={{ height: "100%" }}>
                 <div
                   style={{
                     display: "flex",
@@ -184,12 +181,12 @@ function App() {
 
       {divider()}
 
-      <div style={{ marginTop: "3rem" }}>
-        <h1 style={{ color: "#fff", textAlign: "center" }}>Projects</h1>
+      <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
+        <h1 style={{ color: "#868686", textAlign: "center" }}>Projects</h1>
         <Row gutter={[30, 30]}>
           {projects?.map((item, index) => (
             <Col span={8}>
-              <Card title={item.name} style={{ maxWidth: "60vw" }}>
+              <Card title={item.name}>
                 <div
                   style={{
                     display: "flex",
@@ -247,31 +244,9 @@ function App() {
         </Row>
       </div>
 
-      {divider()}
-      <div style={{ marginTop: "3rem" }}>
-        <h1 style={{ color: "#fff", textAlign: "center" }}>Worked With</h1>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            overflowX: "auto",
-          }}
-        >
-          {companies?.map((i) => (
-            <Avatar
-              style={{ marginLeft: 20, marginRight: 20 }}
-              size={60}
-              src={i}
-            />
-          ))}
-        </div>
-      </div>
-
       <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
         <p style={{ color: "#868686", textAlign: "center" }}>
-          Chanchala Gorale{" "}
+          © Chanchala Gorale 2024
         </p>
       </div>
     </div>
