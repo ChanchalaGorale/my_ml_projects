@@ -25,8 +25,71 @@ function App() {
     },
   ];
 
+  let skills = [
+    {
+      name: "Artificial Intelligence",
+      list: [
+        "Machine learning",
+        "Deep learning",
+        "Natural language processing",
+        "Convolutional Neural Networks",
+        "Recurrent Neural Networks",
+        "TensorFlow",
+        "Scikit-Learn",
+        "Transformer",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "Jupyter Notebook",
+      ],
+    },
+    {
+      name: "Languages",
+      list: ["Python", "JavaScript", "HTML", "CSS", "MarkDown", "SQL"],
+    },
+    {
+      name: "Database , Cloud Hosting, & Version Control",
+      list: [
+        "MongoDb",
+        "SQLite",
+        "AWS",
+        "AZURE",
+        "GitHub",
+        "Heroku",
+        "Netlify",
+        "GoDaddy",
+      ],
+    },
+    {
+      name: "Frameworks/Libraries",
+      list: ["React.Js", "Node.Js", "Redux", "ReactNative.Js", "Flask"],
+    },
+    {
+      name: "UI Frameworks & Icon Libraries",
+      list: [
+        "Bootstrap",
+        "Material UI",
+        "ANTD",
+        "React Icon",
+        "React Native Icons",
+      ],
+    },
+
+    {
+      name: "Project Management",
+      list: ["JIRA", "Slack", "Confluence", "Notion", "Agile/Scrum"],
+    },
+
+    // Machine Learning . Deep Learning . TensorFlow . Scikit-Learn . Transformer. Flask . Pandas . NumPy . Matplotlib . Seaborn .  jupyter notebook
+    // Data Collection . Data Cleaning . Feature analysis . Creating a Model . Testing Model . Deploying Model
+    //  Javascript . React (Redux) + React-Native + Node.JS . Express .  RESTful APIs . MongoDB/SQL .Testing
+    // GitHub . Responsive Design. Bootstrap/ANTD/Material UI . Figma .  UI/UX Design Principles
+    // JIRA . Slack . Notion . Confluence . Agile development . Canva . Google Analytics . Meta
+  ];
+
   return (
-    <div>
+    <div style={{ padding: 20 }}>
       <div
         style={{
           display: "flex",
@@ -49,67 +112,96 @@ function App() {
         Chanchala Gorale
       </Title>
 
-      <Divider style={{ color: "#fff" }} />
+      <Divider style={{ borderColor: "#d9d9d9" }} />
 
-      <Row gutter={[30, 30]}>
-        {projects?.map((item, index) => (
-          <Col span={8}>
-            <Card title={item.name} style={{ maxWidth: "60vw" }}>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  flexWrap: "wrap",
-                }}
-              >
-                {item?.skills?.map((i) => (
-                  <Tag>{i}</Tag>
-                ))}
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  marginTop: 20,
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                }}
-              >
-                <Button
-                  size="large"
-                  type="primary"
-                  style={{
-                    marginRight: 20,
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  onClick={() => {
-                    window.open(item?.app, "_blank");
-                  }}
-                >
-                  <FaLaptopCode style={{ marginRight: 5 }} />
-                  Live App
-                </Button>
-                <Button
-                  size="large"
-                  type="primary"
+      <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
+        <h1 style={{ color: "#fff" }}>Skills</h1>
+        <Row gutter={[30, 30]}>
+          {skills?.map((item, index) => (
+            <Col span={8}>
+              <Card title={item.name} style={{ maxWidth: "60vw" }}>
+                <div
                   style={{
                     display: "flex",
-                    justifyContent: "center",
+                    justifyContent: "flex-start",
                     alignItems: "center",
-                  }}
-                  onClick={() => {
-                    window.open(item?.github, "_blank");
+                    flexWrap: "wrap",
                   }}
                 >
-                  <FaGithub style={{ marginRight: 5 }} /> Github Repo
-                </Button>
-              </div>
-            </Card>
-          </Col>
-        ))}
-      </Row>
+                  {item?.list?.map((i) => (
+                    <Tag>{i}</Tag>
+                  ))}
+                </div>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
+
+      <Divider style={{ borderColor: "#d9d9d9" }} />
+
+      <div style={{ marginTop: "3rem" }}>
+        <h1 style={{ color: "#fff" }}>Projects</h1>
+        <Row gutter={[30, 30]}>
+          {projects?.map((item, index) => (
+            <Col span={8}>
+              <Card title={item.name} style={{ maxWidth: "60vw" }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "flex-start",
+                    alignItems: "center",
+                    flexWrap: "wrap",
+                  }}
+                >
+                  {item?.skills?.map((i) => (
+                    <Tag>{i}</Tag>
+                  ))}
+                </div>
+                <div
+                  style={{
+                    display: "flex",
+                    marginTop: 20,
+                    justifyContent: "flex-start",
+                    alignItems: "center",
+                  }}
+                >
+                  <Button
+                    size="large"
+                    type="primary"
+                    style={{
+                      marginRight: 20,
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    onClick={() => {
+                      window.open(item?.app, "_blank");
+                    }}
+                  >
+                    <FaLaptopCode style={{ marginRight: 5 }} />
+                    Live App
+                  </Button>
+                  <Button
+                    size="large"
+                    type="primary"
+                    style={{
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    }}
+                    onClick={() => {
+                      window.open(item?.github, "_blank");
+                    }}
+                  >
+                    <FaGithub style={{ marginRight: 5 }} /> Github Repo
+                  </Button>
+                </div>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </div>
     </div>
   );
 }
