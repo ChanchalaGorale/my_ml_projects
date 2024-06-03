@@ -131,7 +131,7 @@ function App() {
         Chanchala Gorale
       </Title>
       <p style={{ textAlign: "center", color: "#fff", fontWeight: "600" }}>
-        AI Engineer | Full Stack Developer | Product Manager
+        AI Engineer | CTO
       </p>
 
       <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
