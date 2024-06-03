@@ -1,12 +1,30 @@
 import "./App.css";
-import { Avatar, Button, Typography } from "antd";
+import { Avatar, Button, Col, Row, Tag, Typography } from "antd";
 import profile from "./assets/profile.jpeg";
 import { Divider } from "antd";
 import { Card } from "antd";
+import { FaLaptopCode } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const { Title } = Typography;
 
 function App() {
+  let projects = [
+    {
+      github:
+        "https://github.com/hypothesistribetechnology/second-hand-car-price",
+      app: "https://car-price-calculator-a722d18f141c.herokuapp.com/",
+      name: "Secondhand Car Price Calculator",
+      skills: ["tensorflow", "pickle", "matplotlib", "seaborn", "numpy"],
+    },
+    {
+      github: "https://github.com/hypothesistribetechnology/language_detector",
+      app: "https://cmg-language-detector-6fa65cd6319b.herokuapp.com/",
+      name: "Language Detector",
+      skills: ["sklearn", "pickle", "matplotlib", "seaborn", "pandas"],
+    },
+  ];
+
   return (
     <div>
       <div
@@ -32,29 +50,66 @@ function App() {
       </Title>
 
       <Divider style={{ color: "#fff" }} />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        <Card title="Language Detector" style={{ maxWidth: "60vw" }}>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <Button
-              size="large"
-              type="primary"
-              onClick={() => {
-                window.open(
-                  "https://cmg-language-detector-6fa65cd6319b.herokuapp.com/",
-                  "_blank"
-                );
-              }}
-            >
-              Open App
-            </Button>
-          </div>
-        </Card>
-      </div>
+
+      <Row gutter={[30, 30]}>
+        {projects?.map((item, index) => (
+          <Col span={8}>
+            <Card title={item.name} style={{ maxWidth: "60vw" }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                  flexWrap: "wrap",
+                }}
+              >
+                {item?.skills?.map((i) => (
+                  <Tag>{i}</Tag>
+                ))}
+              </div>
+              <div
+                style={{
+                  display: "flex",
+                  marginTop: 20,
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                }}
+              >
+                <Button
+                  size="large"
+                  type="primary"
+                  style={{
+                    marginRight: 20,
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  onClick={() => {
+                    window.open(item?.app, "_blank");
+                  }}
+                >
+                  <FaLaptopCode style={{ marginRight: 5 }} />
+                  Live App
+                </Button>
+                <Button
+                  size="large"
+                  type="primary"
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                  onClick={() => {
+                    window.open(item?.github, "_blank");
+                  }}
+                >
+                  <FaGithub style={{ marginRight: 5 }} /> Github Repo
+                </Button>
+              </div>
+            </Card>
+          </Col>
+        ))}
+      </Row>
     </div>
   );
 }
