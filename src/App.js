@@ -6,6 +6,8 @@ import { Card } from "antd";
 import { FaLaptopCode } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 
+import { Steps } from "antd";
+
 const { Title } = Typography;
 
 function App() {
@@ -90,6 +92,16 @@ function App() {
     "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png",
   ];
 
+  const divider = () => {
+    return (
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <div style={{ width: "60vh" }}>
+          <Divider style={{ borderColor: "#d9d9d9" }} />
+        </div>
+      </div>
+    );
+  };
+
   return (
     <div style={{ padding: 20 }}>
       <div
@@ -113,8 +125,35 @@ function App() {
       <Title style={{ textAlign: "center", color: "#fff" }}>
         Chanchala Gorale
       </Title>
-
-      <Divider style={{ borderColor: "#d9d9d9" }} />
+      <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
+        <Steps
+          size="small"
+          current={1}
+          items={[
+            {
+              title: "AI Engineer",
+              status: "finish",
+            },
+            {
+              title: "Founder/Product Managment",
+              status: "finish",
+            },
+            {
+              title: "Full Stack Developer",
+              status: "finish",
+            },
+            {
+              title: "UI/UX Developer",
+              status: "finish",
+            },
+            {
+              title: "Technical Writer",
+              status: "finish",
+            },
+          ]}
+        />
+      </div>
+      {divider()}
 
       <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
         <h1 style={{ color: "#fff", textAlign: "center" }}>Skills</h1>
@@ -143,7 +182,7 @@ function App() {
         </Row>
       </div>
 
-      <Divider style={{ borderColor: "#d9d9d9" }} />
+      {divider()}
 
       <div style={{ marginTop: "3rem" }}>
         <h1 style={{ color: "#fff", textAlign: "center" }}>Projects</h1>
@@ -208,8 +247,7 @@ function App() {
         </Row>
       </div>
 
-      <Divider style={{ borderColor: "#d9d9d9" }} />
-
+      {divider()}
       <div style={{ marginTop: "3rem" }}>
         <h1 style={{ color: "#fff", textAlign: "center" }}>Worked With</h1>
 
