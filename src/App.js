@@ -82,6 +82,14 @@ function App() {
     },
   ];
 
+  let companies = [
+    "https://firebasestorage.googleapis.com/v0/b/community-90e01.appspot.com/o/assets%2FGroup%201085%204.png?alt=media&token=42691fcf-045c-4c79-9c37-dd4f91409325",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgnsWy8ajwAzehQ5hngN07Svk9dcnN2G5aW08b-p3SgRzjxnaM9L0-BvQDx7BEvFon2SA&usqp=CAU",
+    "https://yt3.googleusercontent.com/7kopIxs3pC9-87UEu-EnEzubeZFKigU9IHXA5SFfD9MU0okrQvERJP21ukynfERhILNZz9uQWw=s900-c-k-c0x00ffffff-no-rj",
+    "https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png",
+    "https://imageio.forbes.com/blogs-images/patrickmoorhead/files/2016/04/Intel-Logo-1200x911.png?height=539&width=711&fit=bounds",
+  ];
+
   return (
     <div style={{ padding: 20 }}>
       <div
@@ -109,7 +117,7 @@ function App() {
       <Divider style={{ borderColor: "#d9d9d9" }} />
 
       <div style={{ marginTop: "3rem", marginBottom: "3rem" }}>
-        <h1 style={{ color: "#fff" }}>Skills</h1>
+        <h1 style={{ color: "#fff", textAlign: "center" }}>Skills</h1>
         <Row gutter={[30, 30]}>
           {skills?.map((item, index) => (
             <Col span={8}>
@@ -138,7 +146,7 @@ function App() {
       <Divider style={{ borderColor: "#d9d9d9" }} />
 
       <div style={{ marginTop: "3rem" }}>
-        <h1 style={{ color: "#fff" }}>Projects</h1>
+        <h1 style={{ color: "#fff", textAlign: "center" }}>Projects</h1>
         <Row gutter={[30, 30]}>
           {projects?.map((item, index) => (
             <Col span={8}>
@@ -198,6 +206,29 @@ function App() {
             </Col>
           ))}
         </Row>
+      </div>
+
+      <Divider style={{ borderColor: "#d9d9d9" }} />
+
+      <div style={{ marginTop: "3rem" }}>
+        <h1 style={{ color: "#fff", textAlign: "center" }}>Worked With</h1>
+
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            overflowX: "auto",
+          }}
+        >
+          {companies?.map((i) => (
+            <Avatar
+              style={{ marginLeft: 20, marginRight: 20 }}
+              size={60}
+              src={i}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
