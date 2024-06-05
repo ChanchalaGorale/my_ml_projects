@@ -23,6 +23,13 @@ function App() {
       name: "Language Detector",
       skills: ["sklearn", "pickle", "matplotlib", "seaborn", "pandas"],
     },
+    {
+      github:
+        "https://github.com/hypothesistribetechnology/facial-emotion-detection",
+      app: "https://car-price-calculator-a722d18f141c.herokuapp.com/",
+      name: "Secondhand Car Price Calculator",
+      skills: ["tensorflow", "pickle", "matplotlib", "seaborn", "numpy"],
+    },
   ];
 
   let skills = [
@@ -204,22 +211,24 @@ function App() {
                     alignItems: "center",
                   }}
                 >
-                  <Button
-                    size="large"
-                    type="primary"
-                    style={{
-                      marginRight: 20,
-                      display: "flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                    }}
-                    onClick={() => {
-                      window.open(item?.app, "_blank");
-                    }}
-                  >
-                    <FaLaptopCode style={{ marginRight: 5 }} />
-                    Live App
-                  </Button>
+                  {item?.app ? (
+                    <Button
+                      size="large"
+                      type="primary"
+                      style={{
+                        marginRight: 20,
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      }}
+                      onClick={() => {
+                        window.open(item?.app, "_blank");
+                      }}
+                    >
+                      <FaLaptopCode style={{ marginRight: 5 }} />
+                      Live App
+                    </Button>
+                  ) : null}
                   <Button
                     size="large"
                     type="primary"
