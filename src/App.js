@@ -26,9 +26,19 @@ function App() {
     {
       github:
         "https://github.com/hypothesistribetechnology/facial-emotion-detection",
-      app: "https://car-price-calculator-a722d18f141c.herokuapp.com/",
-      name: "Secondhand Car Price Calculator",
-      skills: ["tensorflow", "pickle", "matplotlib", "seaborn", "numpy"],
+      name: "Human Facial Emotion Detector",
+      skills: ["tensorflow", "matplotlib", "seaborn", "numpy", "sklearn"],
+    },
+    {
+      github: "https://github.com/hypothesistribetechnology/malaria-detection",
+      name: "Malaria detection",
+      skills: [
+        "tensorflow",
+        "matplotlib",
+        "seaborn",
+        "numpy",
+        "tensorflow_datasets",
+      ],
     },
   ];
 
